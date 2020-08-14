@@ -1,0 +1,64 @@
+name: UReport
+api-version: 1.14
+version: 5.2
+description: Ultimate Report
+author: [AlaDyn172]
+website: http://dev.bukkit.org/bukkit-plugins/ureport/
+
+main: me.AlaDyn172.UReport.Main
+
+commands:
+    report:
+        description: Report a player.
+    reset:
+        description: Reset the report's config.yml.
+    onduty:
+        description: On-DUTY permission.
+    offduty:
+        description: Off-DUTY permission.
+    grieftp:
+        description: Teleport to griefer.
+    removegtp:
+        description: Remove details for GriefTP of player.
+    ureport:
+        description: Change some settings for the plugin.
+    reports:
+        description: Check reports for specified player.
+
+permissions:
+    ureport.*:
+        description: Use all commands of Ultimate Report plugin.
+        children:
+            ureport.use: true
+            ureport.reset: true
+            ureport.onduty: true
+            ureport.offduty: true
+            ureport.grieftp: true
+            ureport.removegtp: true
+            ureport.ureport: true
+            ureport.reports: true
+        default: op
+    ureport.use:
+        description: Allow to report a player.
+        default: true
+    ureport.reset:
+        description: Allow to reset the report's config.yml.
+        default: op
+    ureport.onduty:
+        description: Allow to On-DUTY.
+        default: op
+    ureport.offduty:
+        description: Allow to Off-DUTY.
+        default: op
+    ureport.grieftp:
+        description: Allow to /GriefTp command.
+        default: op
+    ureport.removegtp:
+        description: Allow to /RemovegTP command.
+        default: op
+    ureport.ureport:
+        description: Allow to /ureport command.
+        default: op
+    ureport.reports:
+        description: Allow to use /reports commands.
+        default: op
